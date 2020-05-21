@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FEND Capstone - Travel App</title>
+  </head>
+  <body>
+    <div id = "app" class="container">
+      <!--1fr-->
+      <div id = "info-display">
+        <!-- picture or not-->
+        <div id="picture">
+          <p id="nopicture"></p>
+          <img src='https://cdn.pixabay.com/photo/2017/06/26/08/43/ribblehead-viaduct-2443085_960_720.jpg' id="piximage">
+          <div id = "destination-search" class = "api-info">Please pick a destination :) !</div>
+        </div>
+        <!--all the info that loads from apis-->
+        <ul id="info-list">
+          
+          <li id = "placelatprint" class = "api-info"></li>
+          <li id = "placelonprint" class = "api-info"></li>
+          <li id = "country" class = "api-info"></li>
+          <li id = "weather-temperature" class = "api-info"></li>
+          <li id="weather-description" class="api-info"></li>
+          <li id="population" class="api-info"></li>
+        </ul>
+        <!--optionals <h1 id="countryInformation"></h1> -->
+      </div>
+      <!--2fr-->
+      <!-- parsed display ends-->
+      <div id=inputplacename class="border-button">
+        <label for="travel-destination" id="placenamelabel">Where do you wanna go?</label>
+        <input type="text" id="travel-destination" class="input-label-class" placeholder="Type your destination">
+      </div>
+      <!--3fr-->
+      <div id='callendar'class="border-button">
+        <label for="date_input" id="start-date">Starting date</label>
+        <input type="date" class="input input-label-class" id="date_input" name="trip-start" value="" min="2020-05-20" max="2025-05-20" required />
+      </div>
+      <!--4fr-->
+      <div id="days-left" class="border-button">
+        <label for="days-to-trip" id="days-to-trip-label">Days left for your trip</label>
+        <input type="text" id="days-to-trip" class="input-label-class" readonly="true" />
+      </div>
+      <!--5fr-->
+      <div id="generatebuttonholder" class="border-button">    
+        <button id="generate" type = "submit" > Search for my Trip </button>
+      </div>
+      <!--6fr-->
+      <footer>
+        <p>made by Bogdan N. for Udacity FEND5</p>
+      </footer>
+    </div>
+
+    <script>
+      //Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+    </script>
+  </body>
+</html>

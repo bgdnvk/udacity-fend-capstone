@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.container {
+  display:grid;
+  grid-template-rows:auto;
+  grid-gap:.5%;
+  background-color:#7bcbe4;
+  color:#070841;
+  padding:2%;
+  margin:1%;
+  
+ }
+ #info-display {
+  display:flex;
+  flex-direction:column
+ }
+ label {
+  display:block
+ }
+ li {
+  list-style:none;
+  padding:.5%;
+  margin:.5%
+  
+  
+ }
+ ul {
+  height:max-content;
+  font-size:1.3rem
+   
+ }
+ img {
+  height:100%;
+  width:100%
+ }
+ #info-list {
+  margin-top:5%;
+  justify-self:center;
+  align-self:center;
+  
+ }
+ button {
+  width:fit-content;
+  height:fit-content;
+  font-size:1.2rem;
+  color:#000;
+  background-color:#46eaf0
+ }
+ .border-button {
+  display:flex;
+  flex-flow:row;
+  align-items:center;
+  align-content:center;
+  justify-content:center;
+  margin:1%;
+  padding:1.2%;
+  font-size:1.2rem;
+  background-color:#fff;
+  box-shadow:inset 0 -3em 3em rgba(0,0,0,.1),0 0 0 2px #fff,.3em .3em 1em rgba(0,0,0,.3)
+ }
+ .input-label-class {
+  margin-left:2%;
+  background-color:#5bd2e7
+ }
+ #picture {
+  display:flex;
+  flex-direction:column;
+  border:2px solid #fff;
+  border-radius:1%;
+  background-color:#f5f5f5;
+  padding-bottom:3%;
+  margin-bottom:.5%
+ }
+ #destination-search {
+  padding-top:1%;
+  font-size:1.1rem
+ }
+
+ .api-info{
+   background-color: lightgray;
+   padding: 1%;
+   margin: 2px;
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ .input:hover,
+ button:hover,
+ #travel-destination {
+  background-color:rgb(27, 59, 129);
+  color: white;
+ }
+
+ #days-to-trip{
+  padding: 0.6%;
+  font-size: 1.05rem;
+  background-color: rgb(75, 158, 185);
+  color: white;
+  text-align: center;
+}
+
+ @media only screen and (min-width:700px) {
+  #info-display {
+   display:flex;
+   flex-direction:row
+  }
+ }
