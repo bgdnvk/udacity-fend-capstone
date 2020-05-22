@@ -14,12 +14,6 @@ var bodyParser = require('body-parser');
 //keys from env folder
 //in case they don't work just replace the ${} with what's commented here
 const {
-    /**
-     *  SERVER_PORT=8000
-     *  GEONAMES_USERNAME=bgdnvk
-        WEATHERBIT_API_KEY=af5368f75eb640cca2bbfe4761452750
-        PIXABAY_API_KEY=16660568-e9324a41d1fc0698eedcbc562
-     */
     SERVER_PORT,
     GEONAMES_USERNAME,
     WEATHERBIT_API_KEY,
